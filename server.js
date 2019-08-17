@@ -1,5 +1,7 @@
 const express = require("express");
 const path = require("path");
+//Task 1: Add code to connect to a MongoDB database named `googlebooks` using the mongoose npm package.
+const mongoose = require("mongoose");
 const PORT = process.env.PORT || 3001;
 const app = express();
 
@@ -12,6 +14,15 @@ if (process.env.NODE_ENV === "production") {
 }
 
 // Define API routes here
+// Add routes, both API and view (I'm working off the in class books app)
+//************************************************************************
+//************************************************************************
+// app.use(routes);
+//************************************************************************
+//************************************************************************
+
+// Connect to the Mongo DB
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/googlebooks");
 
 // Send every other request to the React app
 // Define any API routes before this runs
