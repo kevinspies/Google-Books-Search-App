@@ -1,8 +1,19 @@
 import React, { Component } from "react";
 class Search extends Component {
   //state
+  state = {
+    titleSearch: "",
+    results: []
+  };
   //blah
   //la la la
+
+  handleInputChange = event => {
+    const { name, value } = event.target;
+    this.setState({
+      [name]: value
+    });
+  };
 
   render() {
     return (
@@ -14,7 +25,7 @@ class Search extends Component {
           Book Search
           <br />
           <Input
-            value={this.state.title}
+            value={this.state.titleSearch}
             onChange={this.handleInputChange}
             name="title"
             placeholder="Title (required)"
