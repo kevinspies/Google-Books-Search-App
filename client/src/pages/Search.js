@@ -7,7 +7,20 @@ class Search extends Component {
   render() {
     return (
       <Container fluid>
-        <Row>React Google Books Search</Row>
+        <Row>
+          <Jumbotron>React Google Books Search</Jumbotron>
+        </Row>
+        <Row>
+          Book Search
+          <br />
+          <Input
+            value={this.state.title}
+            onChange={this.handleInputChange}
+            name="title"
+            placeholder="Title (required)"
+          />
+        </Row>
+        <Row>Results</Row>
       </Container>
     );
   }
